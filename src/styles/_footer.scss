@@ -1,0 +1,11 @@
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em 2em;
+}
+
+//added fixed height. Works together with class .container
+.footer {
+  height: 150px;
+  background-color: $main-color;
+}

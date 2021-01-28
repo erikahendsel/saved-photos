@@ -5,6 +5,11 @@
   font-family: "Roboto", sans-serif;
 }
 
+.container {
+  //Forces footer to stay at the bottom of the page. Check footer.scss class .footer
+  min-height: calc(100vh - 150px);
+}
+
 $main-color: #b88862;
 
 @mixin font-small {
@@ -18,8 +23,10 @@ $main-color: #b88862;
 }
 @mixin button-template {
   display: block;
+  border: none;
   padding: 1em 1.7em;
   border-radius: 7px;
   text-decoration: none;
   font-weight: bold;
+  cursor: pointer;
 }

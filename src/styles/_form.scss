@@ -1,0 +1,42 @@
+.form-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  border: solid $main-color 3px;
+  border-radius: 10px;
+  padding: 4em 2em;
+  margin-top: 4em;
+  box-shadow: 5px 4px 4px rgb(124, 124, 124);
+}
+.form-title h2 {
+  text-align: center;
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+
+  label {
+    margin-bottom: 0.4em;
+    margin-top: 1em;
+  }
+
+  input {
+    @include font-medium;
+    padding: 0.2em 0.3em;
+    border-radius: 7px;
+    border: solid 2px rgb(70, 70, 70);
+  }
+}
+.submit-btn {
+  @include button-template;
+  @include font-small;
+  background-color: $main-color;
+  color: white;
+  width: 100%;
+  padding: 0.8em;
+  margin-top: 1.9em;
+}
+.form-sub-content {
+  margin-top: 1.5em;
+  text-align: center;
+}
