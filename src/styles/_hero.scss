@@ -1,0 +1,46 @@
+.hero {
+  position: relative;
+  width: 100%;
+}
+.hero-img-container {
+  position: absolute;
+  background: rgba(0, 0, 0, 1);
+
+  .hero-img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+    opacity: 0.4;
+  }
+}
+
+.hero-content {
+  padding: 1em 2em;
+  position: absolute;
+  height: auto;
+  width: 100%;
+}
+.hero-title {
+  color: white;
+  @include font-big;
+  font-weight: bold;
+}
+.hero-buttons {
+  display: flex;
+  gap: 1em;
+  list-style: none;
+
+  a {
+    @include button-template;
+  }
+}
+.hero-get-started-btn a {
+  background-color: $main-color;
+  color: white;
+}
+.hero-discover-btn a {
+  background-color: white;
+  color: $main-color;
+}
