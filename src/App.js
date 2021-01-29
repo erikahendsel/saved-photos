@@ -15,15 +15,16 @@ function App() {
   return (
     <div className="app">
       <div className="container">
-        <Nav />
         <Router>
           <AuthProvider>
+            <Nav />
             <Switch>
               <PrivateRoute path="/dashboard" component={Dashboard} />
               <PrivateRoute path="/update-profile" component={UpdateProfile} />
               <Route path="/signup" component={SignUp} />
               <Route path="/login" component={Login} />
               <Route path="/forgot-password" component={ForgotPassword} />
+              <Route exact path="/" component={Hero} />
             </Switch>
           </AuthProvider>
         </Router>
