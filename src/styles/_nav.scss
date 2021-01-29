@@ -1,9 +1,29 @@
 .header-menu {
+  position: sticky;
+  top: 0;
+  width: 100%;
   background-color: #b88862;
   display: flex;
-  justify-content: space-between;
+
   align-items: center;
+  height: 3em;
+  z-index: 5;
 }
-.header-links a {
-  padding: 1em;
+.logo {
+  display: none;
+  @media only screen and (min-width: 600px) {
+    display: initial;
+  }
+}
+.header-links {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  //   text-align: center;
+  a {
+    padding: 1em;
+  }
+  @media only screen and (min-width: 600px) {
+    justify-content: flex-end;
+  }
 }

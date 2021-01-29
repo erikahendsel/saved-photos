@@ -21,7 +21,7 @@ export default function Nav() {
 
   return (
     <div className="header-menu">
-      <h1>
+      <h1 className="logo">
         <Link to="/">Logo</Link>
       </h1>
       <div className="header-links">

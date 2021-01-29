@@ -1,11 +1,10 @@
 .hero {
   position: relative;
   width: 100%;
-  min-height: 500px;
 }
-.hero-img-container {
+.hero-container {
   position: absolute;
-  background: rgba(0, 0, 0, 1);
+  background: rgb(34, 34, 34);
 
   .hero-img {
     display: block;
@@ -13,20 +12,24 @@
     height: auto;
     max-height: 400px;
     object-fit: cover;
-    opacity: 0.4;
+    opacity: 0.2;
   }
 }
 
 .hero-content {
-  padding: 1em 2em;
+  padding: 1em;
   position: absolute;
   height: auto;
   width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
 }
 .hero-title {
   color: white;
   @include font-big;
   font-weight: bold;
+  width: 75%;
+  margin-bottom: 0.5em;
 }
 .hero-buttons {
   display: flex;

@@ -19,14 +19,20 @@ $main-color: #b88862;
   font-size: 1.5rem;
 }
 @mixin font-big {
-  font-size: 2rem;
+  font-size: 1.5rem;
+  @media only screen and (min-width: 600px) {
+    font-size: 2rem;
+  }
 }
 @mixin button-template {
   display: block;
   border: none;
-  padding: 1em 1.7em;
+  padding: 0.7em 1em;
   border-radius: 7px;
   text-decoration: none;
   font-weight: bold;
   cursor: pointer;
+  @media only screen and (min-width: 600px) {
+    padding: 1em 1.7em;
+  }
 }
