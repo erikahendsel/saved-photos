@@ -1,52 +1,49 @@
 import React, { useRef, useState } from "react";
-import { Link, useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useAuth } from "../contexts/AuthContext";
 
-export default function Login() {
+export default function ForgotPassword() {
   const emailRef = useRef();
-  const passwordRef = useRef();
-  const { login } = useAuth();
+  const { resetPassword } = useAuth();
   const [error, setError] = useState("");
+  const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(false);
-  const history = useHistory();
 
   async function handleSubmit(e) {
     e.preventDefault();
 
     try {
+      setMessage("");
       setError("");
-      setLoading(true); //disable sign up button when waiting
-      await login(emailRef.current.value, passwordRef.current.value);
-      setLoading(false);
-      history.push("/dashboard");
+      setLoading(true);
+      await resetPassword(emailRef.current.value);
+      setMessage("Check your inbox for further instructions.");
     } catch {
-      setError("Failed to log in.");
-      setLoading(false);
+      setError("Failed to reset password.");
     }
+
+    setLoading(false);
   }
 
   return (
     <>
       <div className="form-container">
         <div className="form-title">
-          <h2>Log In</h2>
+          <h2>Password Reset</h2>
         </div>
         {error && console.log(error)}
+        {message && console.log(message)}
         <form onSubmit={handleSubmit}>
           <div className="form-group" id="email">
             <label htmlFor="email">E-mail</label>
             <input type="email" ref={emailRef} required />
           </div>
-          <div className="form-group" id="password">
-            <label htmlFor="password">Password</label>
-            <input type="password" ref={passwordRef} required />
-          </div>
           <button disabled={loading} className="submit-btn" type="submit">
-            Log In
+            Reset Password
           </button>
         </form>
         <div className="form-sub-content">
-          <Link to="/forgot-password">Forgot Password?</Link>
+          <Link to="/login">Log In</Link>
         </div>
         <div className="form-sub-content">
           Need an account? <Link to="/signup">Sign Up</Link>
