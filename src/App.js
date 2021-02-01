@@ -1,5 +1,4 @@
 import Footer from "./components/Footer";
-import Hero from "./components/Hero";
 import Nav from "./components/Nav";
 import SignUp from "./components/SignUp";
 import Dashboard from "./components/Dashboard";
@@ -10,6 +9,8 @@ import Login from "./components/Login";
 import PrivateRoute from "./components/PrivateRoute";
 import ForgotPassword from "./components/ForgotPassword";
 import UpdateProfile from "./components/UpdateProfile";
+import ImageContext from "./contexts/ImageContext";
+import Home from "./components/Home/Home";
 
 function App() {
   return (
@@ -24,8 +25,11 @@ function App() {
               <Route path="/signup" component={SignUp} />
               <Route path="/login" component={Login} />
               <Route path="/forgot-password" component={ForgotPassword} />
-              <Route exact path="/" component={Hero} />
+              <Route exact path="/" component={Home} />
             </Switch>
+            {/* <ImageContext>
+
+            </ImageContext> */}
           </AuthProvider>
         </Router>
       </div>
