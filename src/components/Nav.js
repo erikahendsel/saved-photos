@@ -16,6 +16,7 @@ export default function Nav() {
       history.push("/login");
     } catch {
       setError("Failed to log out.");
+      console.log(error);
     }
   }
 

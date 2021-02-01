@@ -1,0 +1,40 @@
+.discover {
+  padding: 5em 1em 3em 1em;
+  width: 100%;
+
+  .content {
+    line-height: 1.6em;
+    .title {
+      @include font-big;
+      margin-bottom: 0.5em;
+    }
+    a {
+      @include button-template;
+      background: $main-color;
+      color: white;
+      text-align: center;
+      margin: 1em 0;
+    }
+  }
+  .image {
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+  }
+  @media only screen and (min-width: 600px) {
+    display: flex;
+    column-gap: 1em;
+    align-items: center;
+    .content {
+      width: 50%;
+      a {
+        display: inline-block;
+      }
+    }
+    .image {
+      width: 50%;
+    }
+  }
+}

@@ -1,16 +1,11 @@
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import HomeImageLists from "../components/Home/HomeImageLists";
 
 export const ImageContext = React.createContext();
 
-const API_KEY = process.env.REACT_APP_PEXELS_API_KEY;
-
 export default function ImageProvider() {
-  //   const [error, setError] = useState(null);
-  const [isLoading, setIsLoading] = useState(true);
+  const API_KEY = process.env.REACT_APP_PEXELS_API_KEY;
   const [allPhotos, setallPhotos] = useState([]);
-  const [petPhotos, setPetPhotos] = useState([]);
-  const [natureImages, setNatureImages] = useState([]);
 
   async function fetchApi(url) {
     const dataFetch = await fetch(url, {

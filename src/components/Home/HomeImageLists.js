@@ -1,47 +1,61 @@
-import React, { useEffect, useState, useContext } from "react";
+import React, { useContext } from "react";
 import { ImageContext } from "../../contexts/ImageContext";
-
-const API_KEY = process.env.REACT_APP_PEXELS_API_KEY;
 
 export default function HomeImageLists() {
   const { allPhotos } = useContext(ImageContext);
 
-  console.log("allPhotos: ", allPhotos);
-  // console.log("petPhotos: ", petPhotos);
-  // console.log("natureImages: ", natureImages);
+  console.log(allPhotos);
 
   return (
-    <>
-      <div className="image-cards">
-        <h1>Newest Photos</h1>
-        {allPhotos.newest ? (
-          allPhotos.newest.map((image) => (
-            <img src={image.src.medium} key={image.id}></img>
-          ))
-        ) : (
-          <p>Loading...</p>
-        )}
+    <section className="popular-images">
+      <div className="image-block">
+        <h1 className="title">Newest Photos</h1>
+        <div className="images">
+          {allPhotos.newest ? (
+            allPhotos.newest.map((image) => (
+              <img
+                src={image.src.large}
+                alt={image.photographer}
+                key={image.id}
+              ></img>
+            ))
+          ) : (
+            <p>Loading...</p>
+          )}
+        </div>
       </div>
-      <div className="image-cards">
-        <h1>Awesome Pets</h1>
-        {allPhotos.pets ? (
-          allPhotos.pets.map((image) => (
-            <img src={image.src.medium} key={image.id}></img>
-          ))
-        ) : (
-          <p>Loading...</p>
-        )}
+      <div className="image-block">
+        <h1 className="title">Awesome Pets</h1>
+        <div className="images">
+          {allPhotos.pets ? (
+            allPhotos.pets.map((image) => (
+              <img
+                src={image.src.large}
+                alt={image.photographer}
+                key={image.id}
+              ></img>
+            ))
+          ) : (
+            <p>Loading...</p>
+          )}
+        </div>
       </div>
-      <div className="image-cards">
-        <h1>Stunning nature</h1>
-        {allPhotos.nature ? (
-          allPhotos.nature.map((image) => (
-            <img src={image.src.medium} key={image.id}></img>
-          ))
-        ) : (
-          <p>Loading...</p>
-        )}
+      <div className="image-block">
+        <h1 className="title">Stunning nature</h1>
+        <div className="images">
+          {allPhotos.nature ? (
+            allPhotos.nature.map((image) => (
+              <img
+                src={image.src.large}
+                alt={image.photographer}
+                key={image.id}
+              ></img>
+            ))
+          ) : (
+            <p>Loading...</p>
+          )}
+        </div>
       </div>
-    </>
+    </section>
   );
 }

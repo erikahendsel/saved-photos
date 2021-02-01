@@ -9,7 +9,6 @@ import Login from "./components/Login";
 import PrivateRoute from "./components/PrivateRoute";
 import ForgotPassword from "./components/ForgotPassword";
 import UpdateProfile from "./components/UpdateProfile";
-import ImageContext from "./contexts/ImageContext";
 import Home from "./components/Home/Home";
 
 function App() {
