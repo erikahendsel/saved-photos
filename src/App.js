@@ -1,5 +1,5 @@
 import Footer from "./components/Footer";
-import Hero from "./components/Hero";
+import Home from "./components/Home/Home";
 import Nav from "./components/Nav";
 import SignUp from "./components/SignUp";
 import Dashboard from "./components/Dashboard";
@@ -24,7 +24,7 @@ function App() {
               <Route path="/signup" component={SignUp} />
               <Route path="/login" component={Login} />
               <Route path="/forgot-password" component={ForgotPassword} />
-              <Route exact path="/" component={Hero} />
+              <Route exact path="/" component={Home} />
             </Switch>
           </AuthProvider>
         </Router>

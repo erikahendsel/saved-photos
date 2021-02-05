@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import heroImg from "../images/cat_and_dog.jpg";
+import heroImg from "../../images/coffee-beans.jpg";
 
 export default function Hero() {
   return (
@@ -8,13 +8,13 @@ export default function Hero() {
       <div className="hero-container">
         <img src={heroImg} alt="cat and dog" className="hero-img" />
         <div className="hero-content">
-          <p className="hero-title">Your favorite images in one place</p>
+          <p className="hero-title">Your favorite coffee photos in one place</p>
           <ul className="hero-buttons">
             <li className="hero-get-started-btn">
               <Link to="/login">Get Started</Link>
             </li>
             <li className="hero-discover-btn">
-              <Link to="/search">Discover</Link>
+              <Link to="/coffee-corner">Coffee Corner</Link>
             </li>
           </ul>
         </div>

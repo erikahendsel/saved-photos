@@ -1,9 +1,12 @@
 // Load Font
 @import url("https://fonts.googleapis.com/css2?family=Ribeye+Marrow&family=Roboto:wght@400;500;700&display=swap");
-
+//React Slick Slider
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
 // Import scss components
 @import "./general";
 @import "./nav";
 @import "./hero";
 @import "./form";
+@import "./homeImages";
 @import "./footer";

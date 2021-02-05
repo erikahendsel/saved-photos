@@ -25,7 +25,7 @@ export default function Nav() {
         <Link to="/">Logo</Link>
       </h1>
       <div className="header-links">
-        <Link to="/search">Search</Link>
+        <Link to="/coffee-corner">Coffee Corner</Link>
         <Link to="/favorites">Favorites</Link>
         {/* <Link to="/login">Log In</Link> */}
         {currentUser ? (

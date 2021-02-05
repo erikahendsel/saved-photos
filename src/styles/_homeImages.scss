@@ -1,0 +1,16 @@
+.data-img-container {
+  img {
+    display: block;
+    max-width: 400px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  .slick-slide div {
+    margin: 0 1em;
+  }
+  .slider-title {
+    padding: 3em 0 1em 1em;
+    @include font-medium;
+  }
+}
