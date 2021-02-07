@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Slider from "react-slick";
 
 export default function HomeImage({ dataImages }) {
@@ -11,6 +11,7 @@ export default function HomeImage({ dataImages }) {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3500,
+    pauseOnHover: false,
     responsive: [
       {
         breakpoint: 1024,
@@ -43,7 +44,13 @@ export default function HomeImage({ dataImages }) {
           <Slider {...settings}>
             {dataImages.map((imageTypes) => {
               if (imageTypes.tags.includes("beans")) {
-                return <img src={imageTypes.photo}></img>;
+                return (
+                  <img
+                    src={imageTypes.photo}
+                    alt={imageTypes.author}
+                    key={imageTypes.id}
+                  ></img>
+                );
               }
             })}
           </Slider>
@@ -53,7 +60,13 @@ export default function HomeImage({ dataImages }) {
           <Slider {...settings}>
             {dataImages.map((imageTypes) => {
               if (imageTypes.tags.includes("cups")) {
-                return <img src={imageTypes.photo}></img>;
+                return (
+                  <img
+                    src={imageTypes.photo}
+                    alt={imageTypes.author}
+                    key={imageTypes.id}
+                  ></img>
+                );
               }
             })}
           </Slider>
@@ -63,7 +76,13 @@ export default function HomeImage({ dataImages }) {
           <Slider {...settings}>
             {dataImages.map((imageTypes) => {
               if (imageTypes.tags.includes("grinder")) {
-                return <img src={imageTypes.photo}></img>;
+                return (
+                  <img
+                    src={imageTypes.photo}
+                    alt={imageTypes.author}
+                    key={imageTypes.id}
+                  ></img>
+                );
               }
             })}
           </Slider>

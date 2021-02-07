@@ -7,7 +7,7 @@ function coffeePictures() {
         "https://cdn.pixabay.com/photo/2016/03/30/21/59/coffee-beans-1291656_960_720.jpg",
       link: "https://pixabay.com/images/id-1291656/",
       tags: ["beans"],
-      id: uuidv4(),
+      id: "00001",
     },
     {
       author: "pixel2013",
@@ -16,7 +16,7 @@ function coffeePictures() {
       link:
         "https://pixabay.com/photos/coffee-beans-coffee-cup-cup-coffee-2258839/",
       tags: ["beans"],
-      id: uuidv4(),
+      id: "00002",
     },
     {
       author: "Skitterphoto",
@@ -25,7 +25,7 @@ function coffeePictures() {
       link:
         "https://pixabay.com/photos/coffee-beans-coffee-roasted-beans-917613/",
       tags: ["beans"],
-      id: uuidv4(),
+      id: "00003",
     },
     {
       author: "Kranich17",
@@ -34,7 +34,7 @@ function coffeePictures() {
       link:
         "https://pixabay.com/photos/coffee-coffee-beans-heart-love-3975317/",
       tags: ["beans"],
-      id: uuidv4(),
+      id: "00004",
     },
 
     {
@@ -44,7 +44,7 @@ function coffeePictures() {
       link:
         "https://pixabay.com/photos/coffee-pen-notebook-caffeine-cup-2306471/",
       tags: ["cups"],
-      id: uuidv4(),
+      id: "00005",
     },
     {
       author: "JillWellington",
@@ -52,7 +52,7 @@ function coffeePictures() {
         "https://cdn.pixabay.com/photo/2015/02/05/01/33/valentines-day-624440_960_720.jpg",
       link: "https://pixabay.com/photos/valentine-s-day-valentine-love-624440/",
       tags: ["cups"],
-      id: uuidv4(),
+      id: "00006",
     },
     {
       author: "acekreations",
@@ -61,7 +61,7 @@ function coffeePictures() {
       link:
         "https://pixabay.com/photos/coffee-beans-mug-cup-coffee-cup-1117933/",
       tags: ["cups"],
-      id: uuidv4(),
+      id: "00007",
     },
     {
       author: "Free-Photos",
@@ -70,16 +70,15 @@ function coffeePictures() {
       link:
         "https://pixabay.com/photos/coffee-cafe-cup-saucer-hot-drink-1149983/",
       tags: ["cups"],
-      id: uuidv4(),
+      id: "00008",
     },
-
     {
       author: "LubosHouska",
       photo:
         "https://cdn.pixabay.com/photo/2016/03/06/00/56/coffee-1239549_960_720.jpg",
       link: "https://pixabay.com/photos/coffee-grinder-grain-coffee-1239549/",
       tags: ["grinder"],
-      id: uuidv4(),
+      id: "00009",
     },
     {
       author: "Artturi_Mantysaari",
@@ -87,7 +86,7 @@ function coffeePictures() {
         "https://cdn.pixabay.com/photo/2017/03/12/21/31/coffee-grinder-2138170_960_720.jpg",
       link: "https://pixabay.com/photos/coffee-grinder-coffee-powder-2138170/",
       tags: ["grinder"],
-      id: uuidv4(),
+      id: "00010",
     },
     {
       author: "josealbafotos",
@@ -96,7 +95,7 @@ function coffeePictures() {
       link:
         "https://pixabay.com/photos/coffee-grinder-coffee-bean-brown-1300181/",
       tags: ["grinder"],
-      id: uuidv4(),
+      id: "00011",
     },
     {
       author: "Alexas_Fotos",
@@ -105,7 +104,7 @@ function coffeePictures() {
       link:
         "https://pixabay.com/photos/kermit-frog-grinder-coffee-beans-1694710/",
       tags: ["grinder"],
-      id: uuidv4(),
+      id: "00012",
     },
 
     //ADD MORE HERE

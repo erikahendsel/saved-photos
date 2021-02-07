@@ -35,7 +35,7 @@ export default function SignUp() {
         <div className="form-title">
           <h2>Sign Up</h2>
         </div>
-        {error && console.log(error)}
+        {/* {error && console.log(error)} */}
         <form onSubmit={handleSubmit}>
           <div className="form-group" id="email">
             <label htmlFor="email">E-mail</label>
@@ -49,6 +49,7 @@ export default function SignUp() {
             <label htmlFor="password-confirm">Password Confirmation</label>
             <input type="password" ref={passwordConfirmRef} required />
           </div>
+          {error && <div className="error-message">{error}</div>}
           <button disabled={loading} className="submit-btn" type="submit">
             Sign Up
           </button>

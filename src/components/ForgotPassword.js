@@ -38,6 +38,7 @@ export default function ForgotPassword() {
             <label htmlFor="email">E-mail</label>
             <input type="email" ref={emailRef} required />
           </div>
+          {error && <div className="error-message">{error}</div>}
           <button disabled={loading} className="submit-btn" type="submit">
             Reset Password
           </button>

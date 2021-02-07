@@ -21,9 +21,13 @@ export default function Footer() {
           </ul>
         </div>
         <div className="footer-block">
-          <p className="footer-title">Footer Title</p>
+          <p className="footer-title">Resources</p>
           <ul>
-            <li>Link</li>
+            <li>
+              <a href="https://pixabay.com/" target="_blank">
+                Pixabay
+              </a>
+            </li>
             <li>Link</li>
             <li>Link</li>
           </ul>

@@ -10,6 +10,7 @@ import Login from "./components/Login";
 import PrivateRoute from "./components/PrivateRoute";
 import ForgotPassword from "./components/ForgotPassword";
 import UpdateProfile from "./components/UpdateProfile";
+import CoffeeCorner from "./components/CoffeeCorner/CoffeeCorner";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
               <Route path="/login" component={Login} />
               <Route path="/forgot-password" component={ForgotPassword} />
               <Route exact path="/" component={Home} />
+              <Route path="/" component={CoffeeCorner} />
             </Switch>
           </AuthProvider>
         </Router>
