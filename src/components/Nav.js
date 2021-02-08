@@ -33,10 +33,15 @@ export default function Nav() {
           <img src={CoffeeCornerImg} alt="Coffee Corner" />
           <span className="nav-text">Coffee Corner</span>
         </Link>
-        <Link to="/favorites">
-          <img src={HeartImg} alt="Favorites" />
-          <span>Favorites</span>
-        </Link>
+        {currentUser ? (
+          <Link to="/favorites">
+            <img src={HeartImg} alt="Favorites" />
+            <span>Favorites</span>
+          </Link>
+        ) : (
+          ""
+        )}
+
         {/* <Link to="/login">Log In</Link> */}
         {currentUser ? (
           <Link to="/" onClick={handleLogout}>

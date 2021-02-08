@@ -11,6 +11,7 @@ import PrivateRoute from "./components/PrivateRoute";
 import ForgotPassword from "./components/ForgotPassword";
 import UpdateProfile from "./components/UpdateProfile";
 import CoffeeCorner from "./components/CoffeeCorner/CoffeeCorner";
+import ImageDetails from "./components/ImageDetails";
 
 function App() {
   return (
@@ -26,7 +27,8 @@ function App() {
               <Route path="/login" component={Login} />
               <Route path="/forgot-password" component={ForgotPassword} />
               <Route exact path="/" component={Home} />
-              <Route path="/" component={CoffeeCorner} />
+              <Route path="/coffee-corner" component={CoffeeCorner} />
+              <Route path="/image-details/:id" component={ImageDetails} />
             </Switch>
           </AuthProvider>
         </Router>

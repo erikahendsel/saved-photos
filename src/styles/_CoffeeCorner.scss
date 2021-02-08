@@ -1,0 +1,20 @@
+.coffee-corner-container {
+  padding: 2em 1em;
+
+  a {
+    display: block;
+  }
+  .coffee-images {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1em;
+    @media only screen and (min-width: 600px) {
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    }
+  }
+  .coffee-images img {
+    height: 300px;
+    object-fit: cover;
+    border-radius: 7px;
+  }
+}

@@ -1,0 +1,10 @@
+.image-detail-container {
+  padding: 2em 1em;
+
+  button {
+    @include button-template;
+    background-color: $main-color;
+    color: white;
+    @include font-small;
+  }
+}

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
@@ -24,11 +25,13 @@ export default function Footer() {
           <p className="footer-title">Resources</p>
           <ul>
             <li>
-              <a href="https://pixabay.com/" target="_blank">
+              <a href="https://pixabay.com/" target="_blank" rel="noreferrer">
                 Pixabay
               </a>
             </li>
-            <li>Link</li>
+            <li>
+              <Link to="/flaticons">Flaticons</Link>
+            </li>
             <li>Link</li>
           </ul>
         </div>
