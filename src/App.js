@@ -12,6 +12,8 @@ import ForgotPassword from "./components/ForgotPassword";
 import UpdateProfile from "./components/UpdateProfile";
 import CoffeeCorner from "./components/CoffeeCorner/CoffeeCorner";
 import ImageDetails from "./components/ImageDetails";
+import Favorites from "./components/Favorites";
+import { DatabaseProvider } from "./contexts/DatabaseContext";
 
 function App() {
   return (
@@ -28,7 +30,10 @@ function App() {
               <Route path="/forgot-password" component={ForgotPassword} />
               <Route exact path="/" component={Home} />
               <Route path="/coffee-corner" component={CoffeeCorner} />
-              <Route path="/image-details/:id" component={ImageDetails} />
+              <DatabaseProvider>
+                <Route path="/image-details/:id" component={ImageDetails} />
+                <Route path="/favorites" component={Favorites} />
+              </DatabaseProvider>
             </Switch>
           </AuthProvider>
         </Router>

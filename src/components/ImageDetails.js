@@ -1,11 +1,22 @@
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
+import { useDatabase } from "../contexts/DatabaseContext";
 import ImageData from "../data";
 
 export default function ImageDetails() {
   const [dataImages, setDataImages] = useState(ImageData());
   const parameters = useParams();
+  const [error, setError] = useState("");
+  const { setPhotoCollection } = useDatabase();
 
+  async function addImageIdToDatabase(ImgNr, imgId) {
+    try {
+      console.log(ImgNr, imgId);
+      await setPhotoCollection(ImgNr, imgId);
+    } catch {
+      setError("Failed to add image to database");
+    }
+  }
   return (
     <section>
       <div className="image-detail-container">
@@ -21,17 +32,22 @@ export default function ImageDetails() {
                     {image.link}
                   </a>
                 </p>
+                <div className="content">
+                  <p>
+                    Like the photo? Save it to your favorites and view it later!
+                  </p>
+                  <button
+                    onClick={() => addImageIdToDatabase(image.id, image.id)}
+                  >
+                    Favorite
+                  </button>
+                </div>
               </div>
             );
           } else {
             return "";
           }
         })}
-        <div className="content">
-          <p>Like the photo? Save it to your favorites and view it later!</p>
-
-          <button>Favorite</button>
-        </div>
       </div>
     </section>
   );
